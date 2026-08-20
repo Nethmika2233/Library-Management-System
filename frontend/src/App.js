@@ -849,7 +849,7 @@ function App() {
                             >
                                 <span className="mb-3 grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary"><BookOpen size={17} /></span>
                                 <p className="text-xs text-muted-foreground">Total titles</p>
-                                <strong className="font-display text-2xl">{books.length}</strong>
+                                <strong className="font-display text-2xl text-foreground">{books.length}</strong>
                             </motion.button>
                             <motion.button
                                 variants={statCardVariant}
@@ -860,7 +860,7 @@ function App() {
                             >
                                 <span className="mb-3 grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary"><Library size={17} /></span>
                                 <p className="text-xs text-muted-foreground">Available titles</p>
-                                <strong className="font-display text-2xl">{availableTitles}</strong>
+                                <strong className="font-display text-2xl text-foreground">{availableTitles}</strong>
                             </motion.button>
                             <motion.button
                                 variants={statCardVariant}
@@ -871,7 +871,7 @@ function App() {
                             >
                                 <span className="mb-3 grid h-9 w-9 place-items-center rounded-lg bg-primary/10 text-primary"><Layers size={17} /></span>
                                 <p className="text-xs text-muted-foreground">Total copies</p>
-                                <strong className="font-display text-2xl">{totalCopies}</strong>
+                                <strong className="font-display text-2xl text-foreground">{totalCopies}</strong>
                             </motion.button>
                             <motion.button
                                 variants={statCardVariant}
@@ -884,7 +884,7 @@ function App() {
                                     <ClipboardList size={17} />
                                 </span>
                                 <p className="text-xs text-muted-foreground">Active loans</p>
-                                <strong className="font-display text-2xl">{activeLoans}</strong>
+                                <strong className="font-display text-2xl text-foreground">{activeLoans}</strong>
                                 <p className={cn("mt-1 text-[11px] font-medium", overdueCount > 0 ? "text-rose-600 dark:text-rose-400" : "text-muted-foreground")}>
                                     {overdueCount > 0 ? `${overdueCount} overdue · Rs. ${totalFinesOwed} owed` : "All loans on schedule"}
                                 </p>
@@ -1258,7 +1258,7 @@ function App() {
                                         ].map(([lbl, val]) => (
                                             <div key={lbl} className={cn(card, "p-5")}>
                                                 <p className="text-xs text-muted-foreground">{lbl}</p>
-                                                <strong className="font-display text-2xl">{val}</strong>
+                                                <strong className="font-display text-2xl text-foreground">{val}</strong>
                                             </div>
                                         ))}
                                     </div>
